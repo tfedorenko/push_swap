@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: tfedoren <tfedoren@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/25 18:59:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/05/26 14:28:13 by tfedoren         ###   ########.fr       */
+/*   Created: 2021/12/02 17:23:24 by tfedoren          #+#    #+#             */
+/*   Updated: 2021/12/02 17:23:24 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include <unistd.h>
-# include "Libft/libft.h"
-
-typedef struct s_stack
+int	ft_isdigit(int c)
 {
-	int				data;
-	struct s_stack	*next;
-
-}	t_stack;
-
-#endif
+	return (c >= '0' && c <= '9');
+}

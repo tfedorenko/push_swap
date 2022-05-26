@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/25 18:59:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/05/26 14:28:13 by tfedoren         ###   ########.fr       */
+/*   Created: 2022/02/18 15:31:35 by tfedoren          #+#    #+#             */
+/*   Updated: 2022/05/23 18:44:46 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include <unistd.h>
-# include "Libft/libft.h"
-
-typedef struct s_stack
+int	ft_putstr(char *s)
 {
-	int				data;
-	struct s_stack	*next;
-
-}	t_stack;
-
-#endif
+	if (!s)
+		return (write(1, "(null)", 6));
+	write(1, s, ft_strlen(s));
+	return (ft_strlen(s));
+}

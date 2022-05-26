@@ -1,26 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_putunsignednbr.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/25 18:59:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/05/26 14:28:13 by tfedoren         ###   ########.fr       */
+/*   Created: 2022/02/18 20:21:28 by tfedoren          #+#    #+#             */
+/*   Updated: 2022/05/20 15:57:02 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include <unistd.h>
-# include "Libft/libft.h"
-
-typedef struct s_stack
+static int	ft_unbrlen(unsigned int n)
 {
-	int				data;
-	struct s_stack	*next;
+	int	i;
 
-}	t_stack;
+	i = 0;
+	if (n == 0)
+		i++;
+	while (n > 0)
+	{
+		i++;
+		n /= 10;
+	}
+	return (i);
+}
 
-#endif
+int	ft_putunsignednbr(unsigned int n)
+{
+	int	i;
+
+	i = ft_unbrlen(n);
+	if (n >= 10)
+	{
+		ft_putunsignednbr(n / 10);
+		ft_putunsignednbr(n % 10);
+	}
+	else
+		ft_putchar(n + '0');
+	return (i);
+}

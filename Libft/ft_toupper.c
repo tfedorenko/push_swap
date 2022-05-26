@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: tfedoren <tfedoren@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/25 18:59:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/05/26 14:28:13 by tfedoren         ###   ########.fr       */
+/*   Created: 2021/12/09 17:46:21 by tfedoren          #+#    #+#             */
+/*   Updated: 2021/12/09 17:46:21 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include <unistd.h>
-# include "Libft/libft.h"
-
-typedef struct s_stack
+int	ft_toupper(int c)
 {
-	int				data;
-	struct s_stack	*next;
-
-}	t_stack;
-
-#endif
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
+}
