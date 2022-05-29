@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 20:04:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/05/29 17:05:48 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/05/29 20:19:22 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,26 @@
 void	swap(t_stack *stack)
 {
 	int		i;
-	t_stack	*temp;
 
-	temp = stack;
-	i = temp->data;
-	temp -> data = temp -> next -> data;
-	temp -> next -> data = i;
-	print_stack(temp);
+	i = stack->data;
+	stack -> data = stack -> next -> data;
+	stack -> next -> data = i;
+	print_stack(stack);
 }
-
 
 void	rotate(t_stack *stack)
 {
-	
+	t_stack	*n;
+	t_stack	*temp;
+
+	temp = stack;
+	n = stack;
+	stack = stack->next;
+	while (temp->next)
+	{
+		temp = temp->next;
+	}
+	temp->next = n;
+	n->next = NULL;
+	print_stack(stack);
 }
