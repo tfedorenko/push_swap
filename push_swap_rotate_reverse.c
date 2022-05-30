@@ -1,33 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   push_swap_rotate_reverse.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/25 18:59:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/05/30 19:49:31 by tfedoren         ###   ########.fr       */
+/*   Created: 2022/05/30 20:05:12 by tfedoren          #+#    #+#             */
+/*   Updated: 2022/05/30 20:06:10 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
 
-# include <unistd.h>
-# include "Libft/libft.h"
 
-typedef struct s_stack
+#include "push_swap.h"
+#include <stdio.h>
+
+void rotate_reverse(t_stack **stack)
 {
-	int				data;
-	struct s_stack	*next;
+    
+}
 
-}	t_stack;
+void	rra(t_stack **stack)
+{
+	rotate(stack);
+	ft_printf("rra\n");
+}
 
-t_stack	*new_node(int data);
-int		is_empty(t_stack *root);
-void	print_stack(t_stack *head);
-t_stack	*push_to_stack(t_stack *root, int data);
-void	rotate(t_stack **stack);
-void	swap(t_stack *stack);
+void	rrb(t_stack **stack)
+{
+	rotate(stack);
+	ft_printf("rrb\n");
+}
 
-#endif
+void	rrr(t_stack **stack1, t_stack **stack2)
+{
+	rotate(stack1);
+	rotate(stack2);
+	ft_printf("rrr\n");
+}

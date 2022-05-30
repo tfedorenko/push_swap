@@ -1,33 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   push_swap_swap.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/25 18:59:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/05/30 19:49:31 by tfedoren         ###   ########.fr       */
+/*   Created: 2022/05/30 19:14:00 by tfedoren          #+#    #+#             */
+/*   Updated: 2022/05/30 19:54:57 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
+#include <stdio.h>
 
-# include <unistd.h>
-# include "Libft/libft.h"
-
-typedef struct s_stack
+void	swap(t_stack *stack)
 {
-	int				data;
-	struct s_stack	*next;
+	int		i;
 
-}	t_stack;
+	i = stack->data;
+	stack -> data = stack -> next -> data;
+	stack -> next -> data = i;
+}
 
-t_stack	*new_node(int data);
-int		is_empty(t_stack *root);
-void	print_stack(t_stack *head);
-t_stack	*push_to_stack(t_stack *root, int data);
-void	rotate(t_stack **stack);
-void	swap(t_stack *stack);
+void	sa(t_stack *stack)
+{
+	swap(stack);
+	ft_printf("sa\n");
+}
 
-#endif
+void	sb(t_stack *stack)
+{
+	swap(stack);
+	ft_printf("sb\n");
+}
+
+void	ss(t_stack *stack1, t_stack *stack2)
+{
+	swap(stack1);
+	swap(stack2);
+	ft_printf("ss\n");
+}
