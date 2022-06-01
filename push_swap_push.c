@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 19:42:32 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/05/30 19:55:27 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/01 15:47:21 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,12 @@
 
 void	push(t_stack *stack1, t_stack *stack2)
 {
-    
+	t_stack	*temp;
+
+	temp = stack1;
+	stack1 = stack2;
+	stack2 = stack2->next;
+	stack2->next = temp;
 }
 
 void	pa(t_stack *stack1, t_stack *stack2)

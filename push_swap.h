@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 18:59:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/05/30 20:16:27 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/01 15:48:04 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,21 @@ typedef struct s_stack
 	struct s_stack	*next;
 
 }	t_stack;
-//Siemanko
+
 t_stack	*new_node(int data);
 int		is_empty(t_stack *root);
 void	print_stack(t_stack *head);
 t_stack	*push_to_stack(t_stack *root, int data);
 void	rotate(t_stack **stack);
 void	swap(t_stack *stack);
+void	push(t_stack *stack1, t_stack *stack2);
+void	sa(t_stack *stack);
+void	sb(t_stack *stack);
+void	ss(t_stack *stack1, t_stack *stack2);
+void	ra(t_stack **stack);
+void	rb(t_stack **stack);
+void	rr(t_stack **stack1, t_stack **stack2);
+
+
 
 #endif
