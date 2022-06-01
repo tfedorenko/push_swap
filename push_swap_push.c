@@ -6,14 +6,14 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 19:42:32 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/01 21:13:11 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/01 21:21:32 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
 
-void push(t_stack **head, int data)
+void	push(t_stack **head, int data)
 {
 	t_stack *tmp = *head;
 	if(!tmp)
