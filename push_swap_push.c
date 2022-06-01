@@ -6,27 +6,25 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 19:42:32 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/01 21:50:30 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/01 22:02:08 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
 
-void	push(t_stack **head, int data)
+void	push(t_stack **stack, int data)
 {
 	t_stack	*tmp;
 
-	tmp = *head;
+	tmp = *stack;
 	if (!tmp)
 	{
-		*head = new_node(data);
+		*stack = new_node(data);
 		return ;
 	}
 	while (tmp->next != NULL)
-	{
 		tmp = tmp->next;
-	}
 	tmp->next = new_node(data);
 }
 

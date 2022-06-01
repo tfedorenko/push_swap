@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 18:59:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/01 21:49:06 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/01 21:51:50 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,5 @@ void	rb(t_stack **stack);
 void	rr(t_stack **stack1, t_stack **stack2);
 void	pa(t_stack **stack_a, t_stack **stack_b);
 void	pb(t_stack **stack_b, t_stack **stack_a);
-
 
 #endif
