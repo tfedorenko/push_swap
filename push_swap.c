@@ -6,14 +6,12 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 13:23:11 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/01 15:20:34 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/01 20:56:06 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
-
-
 
 int	main(int argv, char **argc)
 {
@@ -21,6 +19,7 @@ int	main(int argv, char **argc)
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 	t_stack	*ptr;
+	t_stack	*ptr_b;
 
 	i = 3;
 	stack_a = new_node(atoi(argc[1]));
@@ -44,8 +43,22 @@ int	main(int argv, char **argc)
 	
 	
 
-
-	push(stack_a, stack_b);
+	printf("\n");
+	pb(&stack_b, &stack_a);
+	printf("Stack a thingy\n");
 	print_stack(stack_a);
+	printf("\n");
+	printf("Stack b thingy\n");
 	print_stack(stack_b);
+	printf("\n");
+	pb(&stack_b, &stack_a);
+	printf("Stack a thingy\n");
+	print_stack(stack_a);
+	printf("\n");
+	printf("Stack b thingy\n");
+	print_stack(stack_b);
+
+//  sa(stack_a);
+//  ra(&stack_a);
+
 }

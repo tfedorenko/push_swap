@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 20:04:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/01 15:01:51 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/01 21:06:31 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,16 @@ t_stack	*new_node(int data)
 
 int	is_empty(t_stack *root)
 {
-	return (!root);
+	if(!root)
+		return 1;
+	return 0;
 }
 
 void	print_stack(t_stack *head)
 {
 	t_stack	*current_node;
-
+	if(!head)
+		return ;
 	while (head->next != NULL)
 	{
 		ft_printf("%d\n", head->data);
@@ -45,6 +48,27 @@ void	print_stack(t_stack *head)
 
 t_stack	*push_to_stack(t_stack *root, int data)
 {
-	root->next = new_node(data);
+	if(!root)
+	{	
+		root = new_node(data);
+		root->next = NULL;
+	}else
+		root->next = new_node(data);
 	return (root->next);
+}
+
+int	pop(t_stack **root)
+{
+	t_stack	*temp;
+	int		popped;
+	if (is_empty((*root)) == 1)
+	{
+		return (0);
+	}
+	temp = *root;
+	popped = temp->data;
+	*root = (*root)->next;
+
+	free(temp);
+	return popped;
 }
