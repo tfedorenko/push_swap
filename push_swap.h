@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 18:59:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/05 18:41:35 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/05 19:04:44 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_stack
 
 }	t_stack;
 
+t_stack	*create_stack(int n, char **input);
 t_stack	*new_node(int data);
 int		is_empty(t_stack *root);
 void	print_stack(t_stack *head);

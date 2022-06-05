@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 20:05:12 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/05 18:38:04 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/05 18:54:02 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,22 +25,13 @@ void	rotate_reverse(t_stack **stack)
 	*stack = (*stack)->next;
 	while (temp->next)
 	{
-		// printf("rotate_reverse thingy\n");
 		before_last_one = temp;
 		temp = temp->next;
 		last_one = temp;
 	}
-			// printf("before_last_one=%d\n", before_last_one->data);
-			// printf("last_one=%d\n", last_one->data);
-			// printf("first_one=%d\n", first_one->data);
-			
-		
 	temp->next = first_one;
-	// print_stack(temp);
 	before_last_one->next = NULL;
-	// print_stack(temp);
 	*stack = temp;
-	// print_stack(stack);
 }
 
 void	rra(t_stack **stack)
