@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 13:23:11 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/01 20:56:06 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/05 18:40:25 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,22 +43,37 @@ int	main(int argv, char **argc)
 	
 	
 
-	printf("\n");
-	pb(&stack_b, &stack_a);
-	printf("Stack a thingy\n");
-	print_stack(stack_a);
-	printf("\n");
-	printf("Stack b thingy\n");
-	print_stack(stack_b);
-	printf("\n");
-	pb(&stack_b, &stack_a);
-	printf("Stack a thingy\n");
-	print_stack(stack_a);
-	printf("\n");
-	printf("Stack b thingy\n");
-	print_stack(stack_b);
+	// printf("\n");
+	// pb(&stack_b, &stack_a);
+	// printf("Stack a thingy\n");
+	// print_stack(stack_a);
+	// printf("\n");
+	// printf("Stack b thingy\n");
+	// print_stack(stack_b);
+	// printf("\n");
+	// pb(&stack_b, &stack_a);
+	// printf("Stack a thingy\n");
+	// print_stack(stack_a);
+	// printf("\n");
+	// printf("Stack b thingy\n");
+	// print_stack(stack_b);
 
 //  sa(stack_a);
-//  ra(&stack_a);
+	
+//  ra(&stack_a);				
+	rotate_reverse(&stack_a);
+	print_stack(stack_a);
+	printf("\n");
+	printf("Stack a thingy\n");
+	rotate_reverse(&stack_a);
+	print_stack(stack_a);
+	printf("\n");
+	printf("Stack a thingy\n");
+	rotate_reverse(&stack_a);
+	print_stack(stack_a);
+	printf("\n");
+	printf("Stack a thingy\n");
+	rotate_reverse(&stack_a);
+	print_stack(stack_a);
 
 }

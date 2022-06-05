@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 20:04:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/01 22:00:44 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/05 15:46:41 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,6 @@ int	pop(t_stack **root)
 	temp = *root;
 	popped = temp->data;
 	*root = (*root)->next;
-
 	free(temp);
 	return (popped);
 }
