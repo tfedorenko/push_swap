@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 16:39:15 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/06 20:25:02 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/06 20:39:44 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,11 +79,20 @@ int	check_max_integer(int n, char **input)
 	long	int_max;
 	long	int_min;
 	long	*temp;
+	int		num;
+	char	*str;
 
-	int_max = 2147483647;
-	int_min = -2147483648;
-	i = 1;
-	printf("%d", ft_atoi("-21474836482"));
+	num = ft_atoi(input[i]);
+	str = ft_itoa(num);
+	if (ft_strncmp(str, input[i]))
+	
+	
+
+	
+	// int_max = 2147483647;
+	// int_min = -2147483648;
+	// i = 1;
+	// printf("%d", ft_atoi("-21474836482"));
 	//Convert with ft_atoi to number
 	//Save that number
 	//Use ft_itoa to convert number to string
