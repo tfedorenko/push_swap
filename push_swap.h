@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 18:59:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/05 19:04:44 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/06 16:40:50 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ typedef struct s_stack
 
 }	t_stack;
 
+int		check_input(int n, char **input);
+int		check_duplicates(int n, char **input);
+int		check_integers(int n, char **input);
 t_stack	*create_stack(int n, char **input);
 t_stack	*new_node(int data);
 int		is_empty(t_stack *root);
