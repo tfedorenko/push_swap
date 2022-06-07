@@ -6,12 +6,11 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 20:05:12 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/05 18:54:02 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/07 19:21:33 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 void	rotate_reverse(t_stack **stack)
 {

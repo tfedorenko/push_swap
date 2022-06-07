@@ -6,12 +6,11 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 15:01:20 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/07 18:11:28 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/07 19:21:20 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 long int	ft_atol(char *str)
 {

@@ -6,12 +6,11 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 20:04:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/05 15:46:41 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/07 19:23:50 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 t_stack	*new_node(int data)
 {
@@ -38,13 +37,14 @@ void	print_stack(t_stack *head)
 		return ;
 	while (head->next != NULL)
 	{
-		ft_printf("%d\n", head->data);
+		ft_printf("%d ", head->data);
 		head = head->next;
 	}
 	if (head->data)
 	{
 		ft_printf("%d", head->data);
 	}
+	ft_printf("\n");
 }
 
 t_stack	*push_to_stack(t_stack *root, int data)

@@ -6,12 +6,11 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 13:23:11 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/07 17:12:19 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/07 19:21:53 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 t_stack	*create_stack(int n, char **input)
 {
@@ -42,17 +41,10 @@ t_stack	*create_stack(int n, char **input)
 int	main(int argv, char **argc)
 {
 	t_stack	*stack_a;
+	t_stack	*stack_b;
 
 	if (check_input(argv, argc) == -1)
 		return (0);
-	
 	stack_a = create_stack(argv, argc);
-	// int		i;	
-	// t_stack	*stack_a;
-	// t_stack	*stack_b;
-	// t_stack	*ptr;
-	// t_stack	*ptr_b;
-
-
 	print_stack(stack_a);
 }

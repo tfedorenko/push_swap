@@ -6,13 +6,12 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 19:14:36 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/05/30 20:06:18 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/07 19:21:39 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "push_swap.h"
-#include <stdio.h>
 
 void	rotate(t_stack **stack)
 {

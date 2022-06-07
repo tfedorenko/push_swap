@@ -6,12 +6,11 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 19:42:32 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/01 22:02:08 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/07 19:21:28 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 void	push(t_stack **stack, int data)
 {
