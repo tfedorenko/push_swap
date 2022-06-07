@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 16:39:15 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/07 18:48:30 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/07 18:56:50 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,9 +71,9 @@ int	check_max_integer(int n, char **input)
 	i = 1;
 	while (i < n)
 	{
-		if (ft_atol(input[i]) > INT_MAX || ft_atol(input[i]) <= INT_MIN)
+		if (ft_atol(input[i]) > INT_MAX || ft_atol(input[i]) < INT_MIN)
 		{
-			ft_printf("Error:some arguments are bigger/smaller than an int");
+			ft_printf("Error:some arguments are bigger/smaller than an int\n");
 			return (-1);
 		}
 		i++;
@@ -83,7 +83,8 @@ int	check_max_integer(int n, char **input)
 
 int	check_input(int n, char **input)
 {
-	if (!check_integers(n, input) && !check_duplicates(n, input) && !check_max_integer(n, input))
+	if (!check_integers(n, input) && !check_duplicates(n, input) \
+		&& !check_max_integer(n, input))
 		return (0);
 	else
 		return (-1);
