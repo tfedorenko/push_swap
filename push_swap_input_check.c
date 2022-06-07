@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 16:39:15 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/06 20:39:44 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/07 18:12:36 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,48 +75,20 @@ int	check_integers(int n, char **input)
 int	check_max_integer(int n, char **input)
 {
 	int		i;
-	int		*ptr;
-	long	int_max;
-	long	int_min;
-	long	*temp;
-	int		num;
-	char	*str;
 
-	num = ft_atoi(input[i]);
-	str = ft_itoa(num);
-	if (ft_strncmp(str, input[i]))
-	
-	
-
-	
-	// int_max = 2147483647;
-	// int_min = -2147483648;
-	// i = 1;
-	// printf("%d", ft_atoi("-21474836482"));
-	//Convert with ft_atoi to number
-	//Save that number
-	//Use ft_itoa to convert number to string
-	//30
-	//"30" 
-	//ft_strncp("30", temp[i], ft_strlen(30)) == 0
-	// temp = malloc(sizeof(int));
-	// while (i < n)
-	// {
-		
-	// 	temp[i] = ft_atoi(input[i]);
-	// 	printf("I'm here %d\n", ft_atoi(input[i]));
-	// 	printf("I'm here %d\n", temp[i]);
-	// 	if (ft_atoi(input[i]) > int_max || ft_atoi(input[i]) < int_min)
-	// 	{
-	// 		ft_printf("Error:some arguments are bigger or smaller than an integer");
-	// 		return (-1);
-	// 	}
-	// 	i++;
-	// }
-		// printf("I'm here");
-		
+	i = 1;
+	while (i < n)
+	{
+		printf("I'm here %ld\n", ft_atol(input[i]));
+		if (ft_atol(input[i]) > INT_MAX || ft_atol(input[i]) < INT_MIN)
+		{
+			printf("I'm here %ld\n", ft_atol(input[i]));
+			ft_printf("Error:some arguments are bigger or smaller than an integer");
+			return (-1);
+		}
+			i++;
+	}
 	return (0);
-
 }
 
 int	check_input(int n, char **input)

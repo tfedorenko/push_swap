@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 18:59:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/06 16:40:50 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/07 18:15:28 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,10 @@ typedef struct s_stack
 
 }	t_stack;
 
+# define INT_MAX 2147483647
+# define INT_MIN -2147483647
+
+long int		ft_atol(char *str);
 int		check_input(int n, char **input);
 int		check_duplicates(int n, char **input);
 int		check_integers(int n, char **input);
