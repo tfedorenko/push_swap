@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 20:05:12 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/07 19:21:33 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/07 20:53:22 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,19 +35,19 @@ void	rotate_reverse(t_stack **stack)
 
 void	rra(t_stack **stack)
 {
-	rotate(stack);
+	rotate_reverse(stack);
 	ft_printf("rra\n");
 }
 
 void	rrb(t_stack **stack)
 {
-	rotate(stack);
+	rotate_reverse(stack);
 	ft_printf("rrb\n");
 }
 
 void	rrr(t_stack **stack1, t_stack **stack2)
 {
-	rotate(stack1);
-	rotate(stack2);
+	rotate_reverse(stack1);
+	rotate_reverse(stack2);
 	ft_printf("rrr\n");
 }
