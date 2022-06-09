@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 16:39:15 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/07 19:21:24 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/09 11:52:02 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	check_duplicates(int n, char **input)
 		{
 			if (ft_atoi(input[i]) == ft_atoi(input[j]))
 			{
-				ft_printf("Error: some arguments are duplicates\n");
+				ft_printf("Error\n");
 				return (-1);
 			}
 			j++;
@@ -53,7 +53,7 @@ int	check_integers(int n, char **input)
 			}
 			if (!ft_isdigit(input[i][j]))
 			{
-				ft_printf("Error: some arguments are not integers\n");
+				ft_printf("Error\n");
 				return (-1);
 			}
 			j++;
@@ -72,7 +72,7 @@ int	check_max_integer(int n, char **input)
 	{
 		if (ft_atol(input[i]) > INT_MAX || ft_atol(input[i]) < INT_MIN)
 		{
-			ft_printf("Error:some arguments are bigger/smaller than an int\n");
+			ft_printf("Error\n");
 			return (-1);
 		}
 		i++;

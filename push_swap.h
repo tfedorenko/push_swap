@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 18:59:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/07 19:20:53 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/09 13:56:00 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ void		pb(t_stack **stack_b, t_stack **stack_a);
 void		rra(t_stack **stack);
 void		rrb(t_stack **stack);
 void		rrr(t_stack **stack1, t_stack **stack2);
+void		push_swap_microsort(t_stack **stack_a, t_stack **stack_b);
 
 #endif
