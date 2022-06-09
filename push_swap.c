@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 13:23:11 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/09 15:18:43 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/09 20:16:03 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,11 @@ int	main(int argv, char **argc)
 	if (check_input(argv, argc) == -1)
 		return (0);
 	stack_a = create_stack(argv, argc);
-	push_swap_microsort(&stack_a, &stack_b);
-	// push_swap_minisort(&stack_a, &stack_b);
+	// push_swap_microsort(&stack_a, &stack_b);
+	push_swap_minisort(&stack_a, &stack_b);
+	// int max;
+	// max = find_max(stack_a);
+	// printf("max %d\n", max);
 	print_stack(stack_a);
+	print_stack(stack_b);
 }
