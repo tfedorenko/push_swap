@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 13:23:11 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/09 13:58:50 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/09 14:56:24 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,7 @@ int	main(int argv, char **argc)
 		return (0);
 	stack_a = create_stack(argv, argc);
 	push_swap_microsort(&stack_a, &stack_b);
+	// int	check;
+	// check = check_if_sorted(&stack_a);
 	print_stack(stack_a);
 }
