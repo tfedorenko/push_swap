@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 15:08:00 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/09 20:23:00 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/10 16:29:07 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,18 +47,20 @@ void	push_swap_minisort(t_stack **stack_a, t_stack **stack_b)
 
 	pb(stack_b, stack_a);
 	pb(stack_b, stack_a);
-	print_stack(*stack_a);
+	// print_stack(*stack_a);
+	// print_stack(*stack_b);
 	
 	// *max = find_max(*stack_a);
-	// printf("Max= %d\n", max->data);
+	printf("I'm here1\n");
 	while (check_if_sorted(stack_a) && stack_b != NULL)
 	{
+		printf("I'm here1\n");
 		push_swap_microsort(stack_a, stack_b);
 		if ((*stack_a)->data < (*stack_b)->data)
 			pa(stack_a, stack_b);
 		else
 			rb(stack_b);
-		pa(stack_a, stack_b);
+		// pa(stack_a, stack_b);
 	}
 
 	return ;

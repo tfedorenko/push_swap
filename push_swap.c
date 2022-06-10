@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 13:23:11 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/09 20:16:03 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/10 16:44:36 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,23 @@ int	main(int argv, char **argc)
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 
-	if (check_input(argv, argc) == -1)
+	if (check_input(argv, argc) == -1 || argv - 1 < 3 )
 		return (0);
+	// if (check_input(argv, argc) == -1)
+		// return (0);
 	stack_a = create_stack(argv, argc);
-	// push_swap_microsort(&stack_a, &stack_b);
-	push_swap_minisort(&stack_a, &stack_b);
+	// printf("argv - 1 = %d\n", argv - 1);
+
+
+	if (argv - 1 == 3)
+		push_swap_microsort(&stack_a, &stack_b);
+	// if ( 3 < argv - 1 && argv - 1 <= 5)
+		// push_swap_minisort(&stack_a, &stack_b);
 	// int max;
 	// max = find_max(stack_a);
 	// printf("max %d\n", max);
+	ft_printf("Sorted stack: ");
 	print_stack(stack_a);
-	print_stack(stack_b);
+	// print_stack(stack_b);
+	// return (0);
 }
