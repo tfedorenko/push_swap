@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 23:35:39 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/10 22:03:38 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/10 22:38:48 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,21 +58,14 @@ void	push_swap_microsort(t_stack **stack_a, t_stack **stack_b)
 	int		element2;
 	int		element3;
 	t_stack	*temp;
-	// printf("I'm here3\n");
+
 	while (check_if_sorted(stack_a))
 	{
-		// printf("I'm here4\n");
 		temp = *stack_a;
-		// printf("I'm here5\n");
-		// ft_printf("Stack_aeee: ");
-		print_stack(*stack_a);
-
 		element1 = (temp)->data;
 		element2 = (temp)->next->data;
 		element3 = (temp)->next->next->data;
-		// printf("I'm here6\n");
 		temp = temp ->next;
-		// printf("I'm here5\n");
 		if (element1 > element2 && element1 > element3 && element3 > element2)
 		{
 			ra(stack_a);
