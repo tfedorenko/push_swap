@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 15:08:00 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/11 15:07:48 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/11 15:13:06 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,47 @@ int	find_min(t_stack *stack)
 	}
 	return (min);
 }
+void	 sort_four(t_stack **stack_a, t_stack **stack_b)
+{
+	if ((*stack_a)->next->next->next->data == find_max(*stack_a))
+		rra(stack_a);
+	if ((*stack_a)->next->next->next->data == find_min(*stack_a))
+		ra(stack_a);
+	pb(stack_b, stack_a);
+	while (check_if_sorted(stack_a) && stack_b != NULL)
+	{
+		push_swap_microsort(stack_a, stack_b);
+	}
+	if ((*stack_b)->data > find_max(*stack_a))
+	{
+		pa(stack_a, stack_b);
+		return ;
+	}
+	if ((*stack_b)->data < find_min(*stack_a))
+	{
+		pa(stack_a, stack_b);
+		rra(stack_a);
+		return ;
+	}
+	if ((*stack_b)->data > (*stack_a)->data)
+	{
+		if ((*stack_b)->data > (*stack_a)->next->data)
+		{
+			rra(stack_a);
+			pa(stack_a, stack_b);
+			ra(stack_a);
+			return ;
+		}
+		if ((*stack_b)->data < (*stack_a)->next->data)
+		{
+			ra(stack_a);
+			pa(stack_a, stack_b);
+			ra(stack_a);
+			ra(stack_a);
+			return ;
+		}
+	}
+}
 
 void	push_swap_minisort(t_stack **stack_a, t_stack **stack_b)
 {
@@ -47,44 +88,7 @@ void	push_swap_minisort(t_stack **stack_a, t_stack **stack_b)
 	stack_size = (ft_stack_size(*stack_a));
 	if (ft_stack_size(*stack_a) == 4)
 	{
-		if ((*stack_a)->next->next->next->data == find_max(*stack_a))
-			rra(stack_a);
-		if ((*stack_a)->next->next->next->data == find_min(*stack_a))
-			ra(stack_a);
-		pb(stack_b, stack_a);
-		while (check_if_sorted(stack_a) && stack_b != NULL)
-		{
-			push_swap_microsort(stack_a, stack_b);
-		}
-		if ((*stack_b)->data > find_max(*stack_a))
-		{
-			pa(stack_a, stack_b);
-			return ;
-		}
-		if ((*stack_b)->data < find_min(*stack_a))
-		{
-			pa(stack_a, stack_b);
-			rra(stack_a);
-			return ;
-		}
-		if ((*stack_b)->data > (*stack_a)->data)
-		{
-			if ((*stack_b)->data > (*stack_a)->next->data)
-			{
-				rra(stack_a);
-				pa(stack_a, stack_b);
-				ra(stack_a);
-				return ;
-			}
-			if ((*stack_b)->data < (*stack_a)->next->data)
-			{
-				ra(stack_a);
-				pa(stack_a, stack_b);
-				ra(stack_a);
-				ra(stack_a);
-				return ;
-			}
-		}
+		sort_four(stack_a, stack_b);
 	}
 
 		
