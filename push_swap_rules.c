@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 20:04:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/07 19:23:50 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/11 18:02:46 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	is_empty(t_stack *root)
 
 void	print_stack(t_stack *head)
 {
-	t_stack	*current_node;
+	// t_stack	*current_node;
 
 	if (!head)
 		return ;

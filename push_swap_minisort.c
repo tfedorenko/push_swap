@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 15:08:00 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/11 16:59:05 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/11 17:11:47 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,7 @@ void	 sort_four(t_stack **stack_a, t_stack **stack_b)
 		rra(stack_a);
 	pb(stack_b, stack_a);
 	while (check_if_sorted(stack_a) && stack_b != NULL)
-	{
 		push_swap_microsort(stack_a, stack_b);
-	}
 	if ((*stack_b)->data > find_max(*stack_a))
 	{
 		pa(stack_a, stack_b);

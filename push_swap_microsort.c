@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 23:35:39 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/10 22:38:48 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/11 18:04:06 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	push_swap_microsort(t_stack **stack_a, t_stack **stack_b)
 	int		element2;
 	int		element3;
 	t_stack	*temp;
-
+	 (void) stack_b;
 	while (check_if_sorted(stack_a))
 	{
 		temp = *stack_a;
