@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 15:08:00 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/10 23:09:56 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/11 15:07:48 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,10 @@ int	find_min(t_stack *stack)
 
 void	push_swap_minisort(t_stack **stack_a, t_stack **stack_b)
 {
-	int stack_size;
-	
+	int	stack_size;
+
 	stack_size = (ft_stack_size(*stack_a));
-	if(ft_stack_size(*stack_a) == 4)
+	if (ft_stack_size(*stack_a) == 4)
 	{
 		if ((*stack_a)->next->next->next->data == find_max(*stack_a))
 			rra(stack_a);
@@ -67,40 +67,24 @@ void	push_swap_minisort(t_stack **stack_a, t_stack **stack_b)
 			rra(stack_a);
 			return ;
 		}
-		ft_printf("Stack_before_sort 5=: ");
-		print_stack(*stack_a);
-		if((*stack_b)->data > (*stack_a)->data)
+		if ((*stack_b)->data > (*stack_a)->data)
 		{
-			if ((*stack_b)->data > (*stack_a)->data)
-			rra(stack_a);
-				ft_printf("Stack_after_rotate1: ");
-			print_stack(*stack_a);
-			pa(stack_a, stack_b);
-				ft_printf("Stack_after_pa: ");
-			print_stack(*stack_a);
-			ra(stack_a);
-			// ra(stack_a);
+			if ((*stack_b)->data > (*stack_a)->next->data)
+			{
+				rra(stack_a);
+				pa(stack_a, stack_b);
+				ra(stack_a);
+				return ;
+			}
+			if ((*stack_b)->data < (*stack_a)->next->data)
+			{
+				ra(stack_a);
+				pa(stack_a, stack_b);
+				ra(stack_a);
+				ra(stack_a);
+				return ;
+			}
 		}
-		// if ((*stack_a)->data < (*stack_b)->data && (*stack_a)->next->data > (*stack_b)->data)
-		// {
-		// 	ra(stack_a);
-		// 	ft_printf("Stack_after_rotate: ");
-		// 	print_stack(*stack_a);
-
-		// }
-		// else
-		// {
-		// 	rra(stack_a);
-		// }
-
-		// pa(stack_a, stack_b);
-
-		// if (check_if_sorted(stack_a))
-		// {
-		// 	ra(stack_a);
-
-		// }
-
 	}
 
 		
@@ -172,3 +156,8 @@ void	push_swap_minisort(t_stack **stack_a, t_stack **stack_b)
 // 5 1 2 3 4
 // 1 3 2 4 5
 
+// 2 1 4 3
+// 2 4 1 3
+
+// 3 4 1 2
+// 3 1 4 2
