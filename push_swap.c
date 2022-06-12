@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 13:23:11 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/12 22:06:49 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/12 22:59:03 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,10 @@ count = 0;
 	if (3 < argv - 1 && argv - 1 <= 5)
 	{
 		count = sort_five_new(&stack_a, &stack_b, count);
+	}
+	if (5 < argv - 1)
+	{
+		count = sorting(&stack_a, &stack_b, count);
 	}
 	
 	// ft_printf("Sorted stack: ");

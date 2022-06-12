@@ -6,7 +6,7 @@
 #    By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/07 20:56:10 by tfedoren          #+#    #+#              #
-#    Updated: 2022/06/12 22:25:08 by tfedoren         ###   ########.fr        #
+#    Updated: 2022/06/12 22:59:54 by tfedoren         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRC =	push_swap_swap.c \
 		push_swap_sorting.c \
 		push_swap_sort_three.c \
 		push_swap_sort_five.c \
+		push_swap_middlesort.c \
 		ft_atol.c 
 
 OBJ = $(SRC:.c=.o)

@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 18:59:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/12 21:59:47 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/12 22:58:54 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void		rotate(t_stack **stack);
 void		rotate_reverse(t_stack **stack);
 void		swap(t_stack *stack);
 int			pop(t_stack **root);
-void	    push(t_stack **stack_1, t_stack **stack_2);
+void        push(t_stack **stack_1, t_stack **stack_2);
 void		sa(t_stack *stack);
 void		sb(t_stack *stack);
 void		ss(t_stack *stack1, t_stack *stack2);
@@ -64,5 +64,6 @@ void		rrb(t_stack **stack);
 void		rrr(t_stack **stack1, t_stack **stack2);
 int			sort_three(t_stack **stack_a);
 int			sort_five_new(t_stack **stack_a, t_stack **stack_b, int count);
+int	      sorting(t_stack **stack_a, t_stack **stack_b, int count);
 
 #endif
