@@ -6,62 +6,62 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 20:04:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/12 19:22:25 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/12 21:18:25 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list	*new_node(int content)
+t_stack	*new_node(int data)
 {
-	t_list	*stack_node;
+	t_stack	*stack_node;
 
-	stack_node = (t_list *)malloc(sizeof(t_list *));
-	stack_node->content = content;
+	stack_node = (t_stack *)malloc(sizeof(t_stack *));
+	stack_node->data = data;
 	stack_node->next = NULL;
 	return (stack_node);
 }
 
-int	is_empty(t_list *root)
+int	is_empty(t_stack *root)
 {
 	if (!root)
 		return (1);
 	return (0);
 }
 
-void	print_stack(t_list *head)
+void	print_stack(t_stack *head)
 {
-	// t_list	*current_node;
+	// t_stack	*current_node;
 
 	if (!head)
 		return ;
 	while (head->next != NULL)
 	{
-		ft_printf("%d ", head->content);
+		ft_printf("%d ", head->data);
 		head = head->next;
 	}
-	if (head->content)
+	if (head->data)
 	{
-		ft_printf("%d", head->content);
+		ft_printf("%d", head->data);
 	}
 	ft_printf("\n");
 }
 
-t_list	*push_to_stack(t_list *root, int content)
+t_stack	*push_to_stack(t_stack *root, int data)
 {
 	if (!root)
 	{	
-		root = new_node(content);
+		root = new_node(data);
 		root->next = NULL;
 	}
 	else
-		root->next = new_node(content);
+		root->next = new_node(data);
 	return (root->next);
 }
 
-int	pop(t_list **root)
+int	pop(t_stack **root)
 {
-	t_list	*temp;
+	t_stack	*temp;
 	int		popped;
 
 	if (is_empty((*root)) == 1)
@@ -69,7 +69,7 @@ int	pop(t_list **root)
 		return (0);
 	}
 	temp = *root;
-	popped = temp->content;
+	popped = temp->data;
 	*root = (*root)->next;
 	free(temp);
 	return (popped);

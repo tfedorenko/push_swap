@@ -6,18 +6,18 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 20:05:12 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/12 19:20:52 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/12 21:17:24 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rotate_reverse(t_list **stack)
+void	rotate_reverse(t_stack **stack)
 {
-	t_list	*first_one;
-	t_list	*last_one;
-	t_list	*before_last_one;
-	t_list	*temp;
+	t_stack	*first_one;
+	t_stack	*last_one;
+	t_stack	*before_last_one;
+	t_stack	*temp;
 
 	temp = *stack;
 	first_one = *stack;
@@ -33,19 +33,19 @@ void	rotate_reverse(t_list **stack)
 	*stack = temp;
 }
 
-void	rra(t_list **stack)
+void	rra(t_stack **stack)
 {
 	rotate_reverse(stack);
 	ft_printf("rra\n");
 }
 
-void	rrb(t_list **stack)
+void	rrb(t_stack **stack)
 {
 	rotate_reverse(stack);
 	ft_printf("rrb\n");
 }
 
-void	rrr(t_list **stack1, t_list **stack2)
+void	rrr(t_stack **stack1, t_stack **stack2)
 {
 	rotate_reverse(stack1);
 	rotate_reverse(stack2);

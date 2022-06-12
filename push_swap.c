@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 13:23:11 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/12 19:22:40 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/12 22:06:49 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,16 +60,22 @@ count = 0;
 		count = sort_five_new(&stack_a, &stack_b, count);
 	}
 	
-	ft_printf("Sorted stack: ");
-	print_stack(stack_a);
-	ft_printf("count = %d\n", count);
+	// ft_printf("Sorted stack: ");
+	// print_stack(stack_a);
+	// ft_printf("count = %d\n", count);
+	// pa(&stack_a, &stack_b);
+	// ft_printf("Sorted stack after microsort2: ");
+	// 	print_stack(stack_a);
+	// 	ft_printf("Stack b2: ");
+	// 	print_stack(stack_b);
+	
 	return (0);
 }
 // t_stack *a;
 // t_stack *cursor;
 
 // a = (void *)malloc(sizeof(t_stack));
-// a->content = ft_atoi(argv);
+// a->data = ft_atoi(argv);
 // a->next = NULL;
 // cursor = a->next;
 // a->next = cursor;
