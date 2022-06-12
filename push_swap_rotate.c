@@ -6,17 +6,17 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 19:14:36 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/07 19:21:39 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/12 19:20:47 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "push_swap.h"
 
-void	rotate(t_stack **stack)
+void	rotate(t_list **stack)
 {
-	t_stack	*n;
-	t_stack	*temp;
+	t_list	*n;
+	t_list	*temp;
 
 	temp = *stack;
 	n = *stack;
@@ -29,19 +29,19 @@ void	rotate(t_stack **stack)
 	n->next = NULL;
 }
 
-void	ra(t_stack **stack)
+void	ra(t_list **stack)
 {
 	rotate(stack);
 	ft_printf("ra\n");
 }
 
-void	rb(t_stack **stack)
+void	rb(t_list **stack)
 {
 	rotate(stack);
 	ft_printf("rb\n");
 }
 
-void	rr(t_stack **stack1, t_stack **stack2)
+void	rr(t_list **stack1, t_list **stack2)
 {
 	rotate(stack1);
 	rotate(stack2);

@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 13:23:11 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/11 18:02:18 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/12 19:22:40 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,35 @@ int	main(int argv, char **argc)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
+	int     count;
 
+count = 0;
 	if (check_input(argv, argc) == -1 || argv - 1 < 3)
 		return (0);
 	stack_a = create_stack(argv, argc);
+	// if (check_if_sorted(&stack_a) == 0)
+	// 	return(0);
 	if (argv - 1 == 3)
-		push_swap_microsort(&stack_a, &stack_b);
+	{
+		count = sort_three(&stack_a);
+	}
+
 	if (3 < argv - 1 && argv - 1 <= 5)
-		push_swap_minisort(&stack_a, &stack_b);
-	// ft_printf("Sorted stack: ");
-	// print_stack(stack_a);
+	{
+		count = sort_five_new(&stack_a, &stack_b, count);
+	}
+	
+	ft_printf("Sorted stack: ");
+	print_stack(stack_a);
+	ft_printf("count = %d\n", count);
 	return (0);
 }
+// t_stack *a;
+// t_stack *cursor;
+
+// a = (void *)malloc(sizeof(t_stack));
+// a->content = ft_atoi(argv);
+// a->next = NULL;
+// cursor = a->next;
+// a->next = cursor;
+// cursor=cursor->next;

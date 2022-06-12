@@ -6,13 +6,13 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 23:35:39 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/11 18:04:06 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/12 19:21:53 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_stack_size(t_stack *lst)
+int	ft_stack_size(t_list *lst)
 {
 	int	i;
 
@@ -28,9 +28,9 @@ int	ft_stack_size(t_stack *lst)
 	return (i);
 }
 
-int	check_if_sorted(t_stack **stack_a)
+int	check_if_sorted(t_list **stack_a)
 {
-	t_stack	*temp;
+	t_list	*temp;
 	int		stack_size;
 	int		i;
 	int		temp_elem;
@@ -38,13 +38,13 @@ int	check_if_sorted(t_stack **stack_a)
 	i = 0;
 	stack_size = ft_stack_size(*stack_a);
 	temp = *stack_a;
-	temp_elem = temp->data;
+	temp_elem = temp->content;
 	temp = temp -> next;
 	while (i < stack_size && temp)
 	{
-		if (temp_elem > temp->data)
+		if (temp_elem > temp->content)
 			return (-1);
-		temp_elem = temp->data;
+		temp_elem = temp->content;
 		temp = temp->next;
 		i++;
 	}
@@ -52,31 +52,41 @@ int	check_if_sorted(t_stack **stack_a)
 }
 
 // suppose to sort only 3 elemets
-void	push_swap_microsort(t_stack **stack_a, t_stack **stack_b)
+int	sort_three(t_list **stack_a)
 {
 	int		element1;
 	int		element2;
 	int		element3;
-	t_stack	*temp;
-	 (void) stack_b;
+	int		count;
+	t_list	*temp;
+	
+	count = 0;
 	while (check_if_sorted(stack_a))
 	{
 		temp = *stack_a;
-		element1 = (temp)->data;
-		element2 = (temp)->next->data;
-		element3 = (temp)->next->next->data;
+		element1 = (temp)->content;
+		element2 = (temp)->next->content;
+		element3 = (temp)->next->next->content;
 		temp = temp ->next;
 		if (element1 > element2 && element1 > element3 && element3 > element2)
 		{
 			ra(stack_a);
-			return ;
+			count++;
+			return (count);
 		}
-		if ((*stack_a)->data > (*stack_a)->next->data)
+		if ((*stack_a)->content > (*stack_a)->next->content)
+		{
 			sa(*stack_a);
+			count++;
+		}
+
 		else
+		{
 			rra(stack_a);
+			count++;
+		}
 	}
-	return ;
+	return (count);
 }
 //  1 2 3
 //  1 3 2
