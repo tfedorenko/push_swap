@@ -6,13 +6,13 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 19:42:32 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/12 22:00:15 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/13 11:44:29 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_lstadd_front_p(t_stack **lst, t_stack *new)
+void	ft_lstadd_front_push_swap(t_stack **lst, t_stack *new)
 {
 	if (!new || !lst)
 		return ;
@@ -37,7 +37,7 @@ void	push(t_stack **stack_1, t_stack **stack_2)
 	{
 		tmp = *stack_2;
 		*stack_2 = tmp->next;
-		ft_lstadd_front_p(stack_1, tmp);
+		ft_lstadd_front_push_swap(stack_1, tmp);
 	}
 }
 
