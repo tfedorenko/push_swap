@@ -6,7 +6,7 @@
 /*   By: stena-he <stena-he@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 22:27:25 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/16 11:35:38 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/06/16 12:09:06 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_stack	*ft_lstlast_push_swap(t_stack *lst)
 	return (lst);
 }
 
-void sorting_arr(int *arr, int max)
+void	sorting_array_of_ints(int *arr, int max)
 {
 	int	i;
 	int	temp;
@@ -30,7 +30,7 @@ void sorting_arr(int *arr, int max)
 	while (i < max)
 	{
 		i++;
-		if (arr[i]<arr[i - 1])
+		if (arr[i] < arr[i - 1])
 		{
 			temp = arr[i];
 			arr[i] = arr[i - 1];
@@ -39,9 +39,11 @@ void sorting_arr(int *arr, int max)
 		}
 	}
 }
-int indexing(int *arr, int data, int max)
+
+int	indexing_helper(int *arr, int data, int max)
 {
 	int	i;
+
 	i = 0;
 	while (i < max)
 	{
@@ -52,6 +54,32 @@ int indexing(int *arr, int data, int max)
 	return (i);
 }
 
+void	indexing(t_stack **stack, int max)
+{
+	t_stack	*temp;
+	int		*temp_int;
+	int		*arr;
+	int		i;
+
+	i = 0;
+	arr = malloc(sizeof(int) * max);
+	temp = *stack;
+	while (temp)
+	{
+		arr[i] = *((int*)temp->data);
+		i++;
+		temp = temp->next;
+	}
+	sorting_array_of_ints(arr, max);
+	temp = *stack;
+	while(temp)
+	{
+		temp_int = temp->data;
+		*temp_int = indexing_helper(arr, *((int *)temp->data), max);
+		temp = temp->next;
+	}
+	free(arr);
+}
 
 int	sorting(t_stack **stack_a, t_stack **stack_b, int count)
 {
