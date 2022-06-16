@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_middlesort.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: stena-he <stena-he@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 22:27:25 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/13 15:49:59 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/16 11:35:38 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,38 @@ t_stack	*ft_lstlast_push_swap(t_stack *lst)
 		lst = lst->next;
 	return (lst);
 }
+
+void sorting_arr(int *arr, int max)
+{
+	int	i;
+	int	temp;
+
+	i = 0;
+	while (i < max)
+	{
+		i++;
+		if (arr[i]<arr[i - 1])
+		{
+			temp = arr[i];
+			arr[i] = arr[i - 1];
+			arr[i - 1] = temp;
+			i = 0;
+		}
+	}
+}
+int indexing(int *arr, int data, int max)
+{
+	int	i;
+	i = 0;
+	while (i < max)
+	{
+		if (data == arr[i])
+			return (i);
+		i++;
+	}
+	return (i);
+}
+
 
 int	sorting(t_stack **stack_a, t_stack **stack_b, int count)
 {
@@ -68,7 +100,7 @@ int	sorting(t_stack **stack_a, t_stack **stack_b, int count)
 		count = count + count_sort_three;
 		while (!is_empty(*stack_b))
 		{
-			if((*stack_b)->data 
+			if((*stack_b)->data) 
 			{
 				pa(stack_a, stack_b);
 				count++;

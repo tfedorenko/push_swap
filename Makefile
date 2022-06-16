@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+         #
+#    By: stena-he <stena-he@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/07 20:56:10 by tfedoren          #+#    #+#              #
-#    Updated: 2022/06/12 22:59:54 by tfedoren         ###   ########.fr        #
+#    Updated: 2022/06/14 21:14:26 by stena-he         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ SRC =	push_swap_swap.c \
 OBJ = $(SRC:.c=.o)
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror 
+CFLAGS = -Wall -Wextra -Werror -g
 RM = rm -rf
 
 all: $(NAME)

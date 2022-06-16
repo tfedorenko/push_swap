@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: stena-he <stena-he@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 18:59:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/13 12:43:58 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/14 21:58:23 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@
 
 typedef struct s_stack
 {
-	int			data;
+	int				data;
 	struct s_stack	*next;
+	int				index;
 
 }	t_stack;
 
