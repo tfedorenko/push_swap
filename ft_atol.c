@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: tfedoren <tfedoren@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 15:01:20 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/07 19:21:20 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/19 23:28:29 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

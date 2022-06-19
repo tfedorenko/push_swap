@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stena-he <stena-he@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: tfedoren <tfedoren@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 18:59:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/14 21:58:23 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/06/19 23:27:21 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,5 @@ void		rrb(t_stack **stack);
 void		rrr(t_stack **stack1, t_stack **stack2);
 int			sort_three(t_stack **stack_a);
 int			sort_five_new(t_stack **stack_a, t_stack **stack_b, int count);
-//int			sorting(t_stack **stack_a, t_stack **stack_b, int count);
 
 #endif

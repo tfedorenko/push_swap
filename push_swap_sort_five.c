@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_minisort.c                               :+:      :+:    :+:   */
+/*   push_swap_sort_five.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: tfedoren <tfedoren@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 15:08:00 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/12 22:06:33 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/19 23:26:51 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,6 @@ int	find_min(t_stack *stack)
 int sort_five_new(t_stack **stack_a, t_stack **stack_b, int count)
 {
 	int count_sort_three;
-	//t_stack *temp;
-							ft_printf("Stack a: ");
-		 print_stack(*stack_a);
-		 ft_printf("Stack b: ");
-		 print_stack(*stack_b);
 
 	while (check_if_sorted(stack_a) && stack_b != NULL)
 	{
@@ -57,49 +52,20 @@ int sort_five_new(t_stack **stack_a, t_stack **stack_b, int count)
 			{
 				pb(stack_b, stack_a);
 				count++;
-				// ft_printf("size: %d\n", ft_stack_size(*stack_a));
-							/*ft_printf("Stack a: ");
-		 print_stack(*stack_a);
-		 ft_printf("Stack b: ");
-		 print_stack(*stack_b);*/
-			} 
-				
+			} 		
 			else
 			{
 				ra(stack_a);
 				count++;
-			}
-			/*ft_printf("Stack a: ");
-		 print_stack(*stack_a);
-		 ft_printf("Stack b: ");
-		 print_stack(*stack_b);*/
-			// ft_printf("size: %d\n", ft_stack_size(*stack_a));
-			
+			}	
 		}
-//ft_printf("I'm here\n");
-		/*ft_printf("Stack a: ");
-		 print_stack(*stack_a);
-		 ft_printf("Stack b: ");
-		 print_stack(*stack_b);*/
-	
 		while (check_if_sorted(stack_a))
 			count_sort_three = sort_three(stack_a);
 		count = count + count_sort_three;
-
-		//temp = *stack_b;
-		//if(temp->data == find_min(stack_b))
-			
-	//ft_printf("I'm here3\n");
 		pa(stack_a, stack_b);
-		count++;
-			ft_printf("I'm here3\n");
-	
+		count++;	
 		pa(stack_a, stack_b);
-		count++;
-
-
-
-		
+		count++;	
 	}
 	return (count);
 }

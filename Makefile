@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: stena-he <stena-he@student.42wolfsburg.de> +#+  +:+       +#+         #
+#    By: tfedoren <tfedoren@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/07 20:56:10 by tfedoren          #+#    #+#              #
-#    Updated: 2022/06/14 21:14:26 by stena-he         ###   ########.fr        #
+#    Updated: 2022/06/19 23:28:36 by tfedoren         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,6 @@ SRC =	push_swap_swap.c \
 		push_swap_rotate_reverse.c \
 		push_swap_input_check.c \
 		push_swap_rules.c \
-		push_swap_sorting.c \
 		push_swap_sort_three.c \
 		push_swap_sort_five.c \
 		push_swap_radix_sort.c \

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_input_check.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stena-he <stena-he@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: tfedoren <tfedoren@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 16:39:15 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/14 21:09:15 by stena-he         ###   ########.fr       */
+/*   Updated: 2022/06/19 23:26:05 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

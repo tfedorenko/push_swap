@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: tfedoren <tfedoren@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 13:23:11 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/13 13:00:13 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/19 23:27:11 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,6 @@ int	main(int argv, char **argc)
 	stack_a = NULL;
 	stack_b = NULL;
 	stack_a = create_stack(argv, argc);
-	// if (check_if_sorted(&stack_a) == 0)
-	// 	return(0);
 	if (argv - 1 == 3)
 	{
 		count = sort_three(&stack_a);
@@ -64,36 +62,11 @@ int	main(int argv, char **argc)
 	
 	if (5 < argv - 1)
 	{
-		//ft_printf("Stack a5: ");
-		//print_stack(stack_a);
-		//ft_printf("\n");
-		//ft_printf("Stack b5: ");
-		//print_stack(stack_b);
-		//ft_printf("\n");
 		indexing(&stack_a, argv - 2);
-		//ft_printf("Stack a6: ");
-		//print_stack(stack_a);
-		//ft_printf("\n");
-		//ft_printf("Stack a index: ");
-		//print_stack_index(stack_a);
-		//ft_printf("\n");
 		count = sorting(&stack_a, &stack_b);
-
 	}
-		//ft_printf("Stack a6: ");
-		//print_stack(stack_a);
-		//ft_printf("\n");
-		//ft_printf("Stack a index: ");
-		//print_stack_index(stack_a);
-		//ft_printf("\n");
 	ft_printf("Sorted stack: ");
 	print_stack(stack_a);
 	ft_printf("count = %d\n", count);
-	// pa(&stack_a, &stack_b);
-	// ft_printf("Sorted stack after microsort2: ");
-	// 	print_stack(stack_a);
-	// 	ft_printf("Stack b2: ");
-	// 	print_stack(stack_b);
-	
 	return (0);
 }

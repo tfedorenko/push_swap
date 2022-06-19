@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_rules.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: tfedoren <tfedoren@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 20:04:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/12 21:18:25 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/19 23:26:45 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ int	is_empty(t_stack *root)
 
 void	print_stack(t_stack *head)
 {
-	// t_stack	*current_node;
-
 	if (!head)
 		return ;
 	while (head->next != NULL)
@@ -48,8 +46,6 @@ void	print_stack(t_stack *head)
 }
 void	print_stack_index(t_stack *head)
 {
-	// t_stack	*current_node;
-
 	if (!head)
 		return ;
 	while (head->next != NULL)

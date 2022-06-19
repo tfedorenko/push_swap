@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_swap.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: tfedoren <tfedoren@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 19:14:00 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/12 21:19:35 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/19 23:27:02 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
