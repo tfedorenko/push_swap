@@ -27,13 +27,16 @@
 typedef struct s_stack
 {
 	int				data;
-	struct s_stack	*next;
 	int				index;
+	struct s_stack	*next;
+	
 
 }	t_stack;
 
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648
+
+void	print_stack_index(t_stack *head);
 
 int			sorting(t_stack **stack_a, t_stack **stack_b);
 void	indexing(t_stack **stack, int max);

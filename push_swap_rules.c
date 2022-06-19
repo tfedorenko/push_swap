@@ -46,6 +46,23 @@ void	print_stack(t_stack *head)
 	}
 	ft_printf("\n");
 }
+void	print_stack_index(t_stack *head)
+{
+	// t_stack	*current_node;
+
+	if (!head)
+		return ;
+	while (head->next != NULL)
+	{
+		ft_printf("%d ", head->index);
+		head = head->next;
+	}
+	if (head->index)
+	{
+		ft_printf("%d", head->index);
+	}
+	ft_printf("\n");
+}
 
 t_stack	*push_to_stack(t_stack *root, int data)
 {

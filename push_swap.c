@@ -12,6 +12,7 @@
 
 #include "push_swap.h"
 
+
 t_stack	*create_stack(int n, char **input)
 {
 	int		i;	
@@ -51,12 +52,6 @@ int	main(int argv, char **argc)
 	stack_a = create_stack(argv, argc);
 	// if (check_if_sorted(&stack_a) == 0)
 	// 	return(0);
-		ft_printf("Stack a2: ");
-		 print_stack(stack_a);
-		 ft_printf("\n");
-		 ft_printf("Stack b2: ");
-		 print_stack(stack_b);
-		  ft_printf("\n");
 	if (argv - 1 == 3)
 	{
 		count = sort_three(&stack_a);
@@ -69,23 +64,28 @@ int	main(int argv, char **argc)
 	
 	if (5 < argv - 1)
 	{
-		ft_printf("Stack a5: ");
-		 print_stack(stack_a);
-		 ft_printf("\n");
-		 ft_printf("Stack b5: ");
-		 print_stack(stack_b);
-		  ft_printf("\n");
+		//ft_printf("Stack a5: ");
+		//print_stack(stack_a);
+		//ft_printf("\n");
+		//ft_printf("Stack b5: ");
+		//print_stack(stack_b);
+		//ft_printf("\n");
 		indexing(&stack_a, argv - 2);
-		ft_printf("Stack a6: ");
-		 print_stack(stack_a);
-		 ft_printf("\n");
-		 ft_printf("Stack b6: ");
-		 print_stack(stack_b);
-		  ft_printf("\n");
+		//ft_printf("Stack a6: ");
+		//print_stack(stack_a);
+		//ft_printf("\n");
+		//ft_printf("Stack a index: ");
+		//print_stack_index(stack_a);
+		//ft_printf("\n");
 		count = sorting(&stack_a, &stack_b);
 
 	}
-	
+		//ft_printf("Stack a6: ");
+		//print_stack(stack_a);
+		//ft_printf("\n");
+		//ft_printf("Stack a index: ");
+		//print_stack_index(stack_a);
+		//ft_printf("\n");
 	ft_printf("Sorted stack: ");
 	print_stack(stack_a);
 	ft_printf("count = %d\n", count);

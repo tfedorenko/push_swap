@@ -24,7 +24,7 @@ SRC =	push_swap_swap.c \
 		push_swap_sorting.c \
 		push_swap_sort_three.c \
 		push_swap_sort_five.c \
-		push_swap_middlesort.c \
+		push_swap_radix_sort.c \
 		ft_atol.c 
 
 OBJ = $(SRC:.c=.o)
