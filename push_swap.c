@@ -17,7 +17,6 @@ t_stack	*create_stack(int n, char **input)
 	int		i;	
 	t_stack	*stack;
 	t_stack	*ptr;
-	//t_stack	*ptr_b;
 
 	i = 3;
 	stack = new_node(atoi(input[1]));
@@ -44,12 +43,20 @@ int	main(int argv, char **argc)
 	t_stack	*stack_b;
 	int     count;
 
-count = 0;
+	count = 0;
 	if (check_input(argv, argc) == -1 || argv - 1 < 3)
 		return (0);
+	stack_a = NULL;
+	stack_b = NULL;
 	stack_a = create_stack(argv, argc);
 	// if (check_if_sorted(&stack_a) == 0)
 	// 	return(0);
+		ft_printf("Stack a2: ");
+		 print_stack(stack_a);
+		 ft_printf("\n");
+		 ft_printf("Stack b2: ");
+		 print_stack(stack_b);
+		  ft_printf("\n");
 	if (argv - 1 == 3)
 	{
 		count = sort_three(&stack_a);
@@ -59,9 +66,24 @@ count = 0;
 	{
 		count = sort_five_new(&stack_a, &stack_b, count);
 	}
+	
 	if (5 < argv - 1)
 	{
-		count = sorting(&stack_a, &stack_b, count);
+		ft_printf("Stack a5: ");
+		 print_stack(stack_a);
+		 ft_printf("\n");
+		 ft_printf("Stack b5: ");
+		 print_stack(stack_b);
+		  ft_printf("\n");
+		indexing(&stack_a, argv - 2);
+		ft_printf("Stack a6: ");
+		 print_stack(stack_a);
+		 ft_printf("\n");
+		 ft_printf("Stack b6: ");
+		 print_stack(stack_b);
+		  ft_printf("\n");
+		count = sorting(&stack_a, &stack_b);
+
 	}
 	
 	ft_printf("Sorted stack: ");
@@ -75,12 +97,3 @@ count = 0;
 	
 	return (0);
 }
-// t_stack *a;
-// t_stack *cursor;
-
-// a = (void *)malloc(sizeof(t_stack));
-// a->data = ft_atoi(argv);
-// a->next = NULL;
-// cursor = a->next;
-// a->next = cursor;
-// cursor=cursor->next;

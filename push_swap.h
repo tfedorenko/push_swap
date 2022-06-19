@@ -35,6 +35,8 @@ typedef struct s_stack
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648
 
+int			sorting(t_stack **stack_a, t_stack **stack_b);
+void	indexing(t_stack **stack, int max);
 int			find_max(t_stack *stack);
 int			find_min(t_stack *stack);
 int			ft_stack_size(t_stack *lst);
@@ -68,6 +70,6 @@ void		rrb(t_stack **stack);
 void		rrr(t_stack **stack1, t_stack **stack2);
 int			sort_three(t_stack **stack_a);
 int			sort_five_new(t_stack **stack_a, t_stack **stack_b, int count);
-int			sorting(t_stack **stack_a, t_stack **stack_b, int count);
+//int			sorting(t_stack **stack_a, t_stack **stack_b, int count);
 
 #endif

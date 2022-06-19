@@ -15,7 +15,7 @@
 void	rotate_reverse(t_stack **stack)
 {
 	t_stack	*first_one;
-	t_stack	*last_one;
+	//t_stack	*last_one;
 	t_stack	*before_last_one;
 	t_stack	*temp;
 
@@ -26,7 +26,7 @@ void	rotate_reverse(t_stack **stack)
 	{
 		before_last_one = temp;
 		temp = temp->next;
-		last_one = temp;
+	//	last_one = temp;
 	}
 	temp->next = first_one;
 	before_last_one->next = NULL;

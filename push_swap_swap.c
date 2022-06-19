@@ -19,18 +19,21 @@ void	swap(t_stack *stack)
 	i = stack->data;
 	stack -> data = stack -> next -> data;
 	stack -> next -> data = i;
+	return ;
 }
 
 void	sa(t_stack *stack)
 {
 	swap(stack);
 	ft_printf("sa\n");
+	return ;
 }
 
 void	sb(t_stack *stack)
 {
 	swap(stack);
 	ft_printf("sb\n");
+	return ;
 }
 
 void	ss(t_stack *stack1, t_stack *stack2)
@@ -38,4 +41,5 @@ void	ss(t_stack *stack1, t_stack *stack2)
 	swap(stack1);
 	swap(stack2);
 	ft_printf("ss\n");
+	return ;
 }
