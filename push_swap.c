@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfedoren <tfedoren@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: stena-he <stena-he@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 13:23:11 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/19 23:27:11 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/20 21:44:09 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 t_stack	*create_stack(int n, char **input)
 {
@@ -42,31 +41,24 @@ int	main(int argv, char **argc)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
-	int     count;
 
-	count = 0;
-	if (check_input(argv, argc) == -1 || argv - 1 < 3)
+	if (check_input(argv, argc) == -1 || argv - 1 < 2)
 		return (0);
 	stack_a = NULL;
 	stack_b = NULL;
 	stack_a = create_stack(argv, argc);
+	if (argv - 1 == 2)
+		sort_two(&stack_a);
 	if (argv - 1 == 3)
-	{
-		count = sort_three(&stack_a);
-	}
-
+		sort_three(&stack_a);
 	if (3 < argv - 1 && argv - 1 <= 5)
-	{
-		count = sort_five_new(&stack_a, &stack_b, count);
-	}
-	
+		sort_five_new(&stack_a, &stack_b);
 	if (5 < argv - 1)
 	{
 		indexing(&stack_a, argv - 2);
-		count = sorting(&stack_a, &stack_b);
+		sorting(&stack_a, &stack_b);
 	}
-	ft_printf("Sorted stack: ");
-	print_stack(stack_a);
-	ft_printf("count = %d\n", count);
+	ft_lstclear_push_swap(&stack_a);
+	ft_lstclear_push_swap(&stack_b);
 	return (0);
 }

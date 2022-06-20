@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_rotate.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfedoren <tfedoren@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: stena-he <stena-he@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 19:14:36 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/19 23:26:39 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/20 20:05:32 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 

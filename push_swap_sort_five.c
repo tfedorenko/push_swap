@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_sort_five.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfedoren <tfedoren@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: stena-he <stena-he@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 15:08:00 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/19 23:26:51 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/20 20:44:35 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,32 +40,20 @@ int	find_min(t_stack *stack)
 	return (min);
 }
 
-int sort_five_new(t_stack **stack_a, t_stack **stack_b, int count)
+int	sort_five_new(t_stack **stack_a, t_stack **stack_b)
 {
-	int count_sort_three;
-
 	while (check_if_sorted(stack_a) && stack_b != NULL)
 	{
-		while(ft_stack_size(*stack_a) > 3)
+		while (ft_stack_size(*stack_a) > 3)
 		{
 			if ((*stack_a)->data == find_min(*stack_a))
-			{
 				pb(stack_b, stack_a);
-				count++;
-			} 		
 			else
-			{
 				ra(stack_a);
-				count++;
-			}	
 		}
-		while (check_if_sorted(stack_a))
-			count_sort_three = sort_three(stack_a);
-		count = count + count_sort_three;
+		sort_three(stack_a);
 		pa(stack_a, stack_b);
-		count++;	
 		pa(stack_a, stack_b);
-		count++;	
 	}
-	return (count);
+	return (0);
 }

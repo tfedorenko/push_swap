@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfedoren <tfedoren@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: stena-he <stena-he@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 18:59:33 by tfedoren          #+#    #+#             */
-/*   Updated: 2022/06/19 23:27:21 by tfedoren         ###   ########.fr       */
+/*   Updated: 2022/06/20 21:44:16 by stena-he         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,29 +17,20 @@
 # include <stdio.h>
 # include "Libft/libft.h"
 
-// typedef struct s_stack
-// {
-// 	int				data;
-// 	struct s_stack	*next;
-
-// }	t_stack;
-
 typedef struct s_stack
 {
 	int				data;
 	int				index;
 	struct s_stack	*next;
-	
-
 }	t_stack;
 
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648
 
-void	print_stack_index(t_stack *head);
-
+void		ft_lstclear_push_swap(t_stack **lst);
+void		print_stack_index(t_stack *head);
 int			sorting(t_stack **stack_a, t_stack **stack_b);
-void	indexing(t_stack **stack, int max);
+void		indexing(t_stack **stack, int max);
 int			find_max(t_stack *stack);
 int			find_min(t_stack *stack);
 int			ft_stack_size(t_stack *lst);
@@ -59,7 +50,7 @@ void		rotate(t_stack **stack);
 void		rotate_reverse(t_stack **stack);
 void		swap(t_stack *stack);
 int			pop(t_stack **root);
-void        push(t_stack **stack_1, t_stack **stack_2);
+void		push(t_stack **stack_1, t_stack **stack_2);
 void		sa(t_stack *stack);
 void		sb(t_stack *stack);
 void		ss(t_stack *stack1, t_stack *stack2);
@@ -71,7 +62,8 @@ void		pb(t_stack **stack_b, t_stack **stack_a);
 void		rra(t_stack **stack);
 void		rrb(t_stack **stack);
 void		rrr(t_stack **stack1, t_stack **stack2);
+int			sort_two(t_stack **stack_a);
 int			sort_three(t_stack **stack_a);
-int			sort_five_new(t_stack **stack_a, t_stack **stack_b, int count);
+int			sort_five_new(t_stack **stack_a, t_stack **stack_bs);
 
 #endif
